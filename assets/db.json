@@ -1,0 +1,16 @@
+[
+    {
+        "pl": "BalPL",
+        "en": "BalEN",
+        "cz": "BalCZ",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "BalePL",
+        "en": "BaleEN",
+        "cz": "BaleCZ",
+        "imgPath": "assets/search.svg",
+        "symbol" : "assets/search.svg"
+    }
+]

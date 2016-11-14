@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="wordFinder.js"></script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="inputElement" placeholder="Wprowadź wartość | Enter value | ??" />
+            <input type="radio" name="lang" value="PL" checked/>PL
+            <input type="radio" name="lang" value="CZ" />CZ
+            <input type="radio" name="lang" value="EN" />EN
+            <span id="resultElement"></span>
+            <button id="triggerButton"><img src="assets/search.svg" /></button>
+        </div>
+        <div id="list">
+
+        </div>
+        <script>
+            let inputElement = document.getElementById('inputElement');
+            let resultElement = document.getElementById('resultElement');
+            let triggerButton = document.getElementById('triggerButton');
+            let langCollection = document.querySelectorAll('input[name="lang"]');
+            let list = document.getElementById('list');
+            let dictionary;
+
+            fetch("assets/db.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                let wordFinder = new WordFinder(langCollection, inputElement, resultElement, data, list);
+                wordFinder.renderList();
+                triggerButton.onclick = wordFinder.renderMatch;
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+        </script>
+    </body>
+</html>
