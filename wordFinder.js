@@ -1,25 +1,25 @@
 "use strict";
 
 class WordFinder {
-    constructor(langCollection, inputElement, resultElement, dictionary, listElement) {
+    constructor(langCollection, inputElement, resultEl, dictionary, listElement) {
         this.langCollection = langCollection;
-        this.inputElement = inputElement;
-        this.resultElement = resultElement;
+        this.inputEl = inputElement;
+        this.resultEl = resultEl;
         this.dictionary = dictionary;
         this.listElement = listElement;
-        this.wordFinder = this;
     }
 
     findMatching() {
-        let inputValue = inputElement.value.toLowerCase();
+        let inputValue = this.inputEl.value.toLowerCase();
         let lang = null;
         let node = {'pl':'Nie znaleziono', 'en':'Not found', 'cz':'???', 'imgPath':'assets/error.svg', 'symbol':'assets/error.svg'};
-        langCollection.forEach(function(element) {
+        
+        this.langCollection.forEach(function(element) {
             if(element.checked) 
                 lang = element.value.toLowerCase();
         }, this);
 
-        dictionary.forEach(function (dictionaryNode) {
+        this.dictionary.forEach(function (dictionaryNode) {
             if(dictionaryNode[lang].toLowerCase() == inputValue.toLowerCase()) 
                 node = dictionaryNode;
         }, this);
@@ -28,11 +28,11 @@ class WordFinder {
     }
 
     renderMatch() {
-        let matchingNode = wordFinder.findMatching();
-        let resultNode = wordFinder.prepareResultNodes(matchingNode);
+        let matchingNode = this.findMatching();
+        let resultNode = this.prepareResultNodes(matchingNode);
 
-        resultElement.innerHTML = "";
-        resultElement.appendChild(resultNode);
+        this.resultEl.innerHTML = "";
+        this.resultEl.appendChild(resultNode);
     }
 
     renderList() {

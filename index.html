@@ -13,7 +13,6 @@
     </head>
     <body class="grey lighten-5">
         <div class="container" style="margin-top: 2em;">
-
             <div class="row">
                 <input type="text" id="inputElement" class="col s12" autofocus placeholder="Wprowadź wartość | Enter value | ??" />
             </div>
@@ -47,21 +46,20 @@
             </div>
         </div>
         <script>
-            let inputElement = document.getElementById('inputElement');
-            let resultElement = document.getElementById('resultElement');
-            let triggerButton = document.getElementById('triggerButton');
-            let langCollection = document.querySelectorAll('input[name="lang"]');
-            let list = document.getElementById('list');
-            let dictionary;
-
             fetch("assets/db.json")
             .then(function(response) {
                 return response.json();
             })
             .then(function(data) {
+                let inputElement = document.getElementById('inputElement');
+                let resultElement = document.getElementById('resultElement');
+                let triggerButton = document.getElementById('triggerButton');
+                let langCollection = document.querySelectorAll('input[name="lang"]');
+                let list = document.getElementById('list');
+                let dictionary;
                 let wordFinder = new WordFinder(langCollection, inputElement, resultElement, data, list);
                 wordFinder.renderList();
-                triggerButton.onclick = wordFinder.renderMatch;
+                triggerButton.onclick = function(e) {wordFinder.renderMatch();};
             })
             .catch(function(err) {
                 console.log(err);
