@@ -9,10 +9,20 @@ class WordFinder {
         this.listElement = listElement;
     }
 
+    generateNotFoundTemplate() {
+        return {
+            'pl':'Nie znaleziono', 
+            'en':'Not found', 
+            'cz':'???', 
+            'imgPath':'assets/error.svg', 
+            'symbol':'assets/error.svg'
+        };
+    }
+
     findMatching() {
         let inputValue = this.inputEl.value.toLowerCase();
         let lang = null;
-        let node = {'pl':'Nie znaleziono', 'en':'Not found', 'cz':'???', 'imgPath':'assets/error.svg', 'symbol':'assets/error.svg'};
+        let node = this.generateNotFoundTemplate();
         
         this.langCollection.forEach(function(element) {
             if(element.checked) 
