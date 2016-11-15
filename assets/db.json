@@ -1,16 +1,247 @@
 [
     {
-        "pl": "BalPL",
-        "en": "BalEN",
-        "cz": "BalCZ",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "siłownik",
+        "en": "actuator",
+        "cz": "akční člen",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "BalePL",
-        "en": "BaleEN",
-        "cz": "BaleCZ",
-        "imgPath": "assets/search.svg",
-        "symbol" : "assets/search.svg"
+        "pl": "zmienna manipulowana",
+        "en": "manipulated variable",
+        "cz": "akční veličina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "algorytm",
+        "en": "algorithm",
+        "cz": "algoritmus",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "aliasing",
+        "en": "aliasing",
+        "cz": "aliasing",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "amplituda",
+        "en": "amplitude",
+        "cz": "amplituda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "modulacja amplitudy",
+        "en": "amplitude modulation",
+        "cz": "amplitudová modulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sygnał analogowy",
+        "en": "analog signal",
+        "cz": "analogový signál",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "ADC",
+        "en": "analogue to digital converter",
+        "cz": "analogově digitální převodník",
+        "imgPath": "",
+        "symbol" : "img/adc.png"
+    },
+    {
+        "pl": "przybliżenie",
+        "en": "approximation",
+        "cz": "aproximace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "astabilny",
+        "en": "astable",
+        "cz": "astabilní",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna ochrona",
+        "en": "automatic protection",
+        "cz": "automatická ochrana",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna kontrola",
+        "en": "automatic control",
+        "cz": "automatické řízení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna sygnalizacja",
+        "en": "automatic signalling",
+        "cz": "automatická signalizace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczny zawór",
+        "en": "automatic valve",
+        "cz": "automatický ventil",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyzacja",
+        "en": "automation",
+        "cz": "automatizace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "flip-flop",
+        "en": "flip-flop",
+        "cz": "bistabilní klopný obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "kod binarny",
+        "en": "binary code",
+        "cz": "binární kód",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sterowanie cyfrowe",
+        "en": "digital control",
+        "cz": "číslicový regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "licznik",
+        "en": "counter",
+        "cz": "čítač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dane",
+        "en": "data",
+        "cz": "data",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zdalne sterowanie",
+        "en": "remote control",
+        "cz": "dálková regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "pomiar zdalny",
+        "en": "remote measurement",
+        "cz": "dálkové měření",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zdalna transmisja",
+        "en": "remote transmission",
+        "cz": "dálkový přenos",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wyróżnikiem",
+        "en": "differentiator",
+        "cz": "derivační člen",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sygnał cyfrowy",
+        "en": "digital signal",
+        "cz": "digitální signál",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "równania różniczkowe",
+        "en": "differential equation",
+        "cz": "diferenciální rovnice",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "impuls Diraca",
+        "en": "Dirac impulse",
+        "cz": "Diracův impuls",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dyskretny regulator",
+        "en": "discrete controller",
+        "cz": "diskrétní regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "najechać",
+        "en": "overrun",
+        "cz": "doběh motoru",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "opóźnienia w ruchu",
+        "en": "traffic delays",
+        "cz": "dopravní zpoždění",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dyskretny regulator",
+        "en": "discrete controller",
+        "cz": "diskrétní regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "Regulacja położenia",
+        "en": "position control",
+        "cz": "dvoupolohová regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dynamika układu",
+        "en": "system dynamics",
+        "cz": "dynamika systému",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "programowanie dynamiczne",
+        "en": "dynamic programming",
+        "cz": "dynamické programování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "własności dynamiczne",
+        "en": "dynamic properties",
+        "cz": "dynamické vlastnosti",
+        "imgPath": "",
+        "symbol" : ""
     }
 ]
