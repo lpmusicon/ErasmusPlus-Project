@@ -29,24 +29,28 @@
 
             <div class="row">
                 <div class="col s5 right-align">
-                    <button class="blue waves-effect btn" id="triggerButton">
+                    <button class="blue waves-effect btn disabled" id="photoButton">
                         Add Photo <i class="material-icons right">add_a_photo</i> 
                     </button>
                 </div>
                 <div class="col s2 center-align">
-                    <button class="indigo waves-effect btn" id="triggerButton">
-                        Add <i class="material-icons right">add</i> 
+                    <button class="indigo waves-effect btn" id="addButton">
+                        <i class="material-icons">add</i> 
                     </button>
                 </div>
                 <div class="col s5 left-align">
-                    <button class="btn blue waves-effect center-align" id="triggerButton">
+                    <button class="btn blue waves-effect center-align disabled" id="symbolButton">
                         <i class="material-icons right">add_a_photo</i>
                         Add Symbol
                     </button>
                 </div>
             </div>
-
             <div class="row">
+                <h5>Unsaved</h5>
+                <span id="currentUnsaved"></span>
+            </div>
+            <div class="row">
+                <h5>Saved</h5>
                 <span id="downloadedDictionary"></span>
             </div>
             <div id="list" class="row"></div>
@@ -62,12 +66,18 @@
                 let inputPL = document.getElementById("pl");
                 let inputCZ = document.getElementById("cz");
                 let inputEN = document.getElementById("en");
-                let symbolBtn = document.getElementById("triggerButton");
+                let symbolBtn = document.getElementById("symbolButton");
+                let addBtn = document.getElementById("addButton");
 
                 let wordAdmin = new WordAdmin( downloadedDictionary, inputPL, inputEN, inputCZ );
                 let downloadedDictionaryNode = document.getElementById("downloadedDictionary");
+                let workingDictionaryNode = document.getElementById("currentUnsaved");
 
                 wordAdmin.bindDownloadedDictionaryNode( downloadedDictionaryNode ).renderDownloadedDictionary();
+                wordAdmin.bindWorkingDictionaryNode( workingDictionaryNode ).renderWorkingDictionary();
+                
+                wordAdmin.bindAddButton(addBtn);
+                //DOES NOT WORK Dunno Why
                 wordAdmin.bindSymbolInput(symbolBtn);
             })
             .catch(console.error);

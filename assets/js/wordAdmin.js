@@ -17,6 +17,33 @@ class WordAdmin
         this.currentSymbol.setAttribute('type', 'file');
     }
 
+    addNewEntry()
+    {
+        let PL = this.polishInput.value;
+        let EN = this.englishInput.value;
+        let CZ = this.czechInput.value;
+
+        if(PL.length == 0 && EN.length == 0 && CZ.length == 0)
+            return;
+
+        let entry = {
+            "pl": PL,
+            "en": EN,
+            "cz": CZ,
+            "imgPath": "",
+            "symbol": ""
+        };
+
+        this.workingDictionary.push(entry);
+
+        this.polishInput.value = "";
+        this.englishInput.value = "";
+        this.czechInput.value = "";
+
+        this.renderWorkingDictionary();
+
+    }
+
     bindPolishInput(input)
     {
         this.polishInput = input;
@@ -37,12 +64,18 @@ class WordAdmin
 
     bindSymbolInput(button)
     {
-        console.log(this.currentSymbol.click());
-
+        var cs = this.currentSymbol;
         button.onclick = function(e) { 
-            console.error(this); 
-            
+            cs.click();
         };
+    }
+
+    bindAddButton(button)
+    {
+        var wa = this;
+        button.onclick = function(e) {
+            wa.addNewEntry();
+        }
     }
 
     bindDownloadedDictionaryNode(node)
@@ -51,10 +84,17 @@ class WordAdmin
         return this;
     }
 
+    bindWorkingDictionaryNode(node)
+    {
+        this.workingDictionaryNode = node;
+        return this;
+    }
+
+
     composeDictionaryEntry(element) 
     {
         let row1 = document.createElement('div');
-        row1.setAttribute('class', 'row');
+        row1.setAttribute('class', 'row valign-wrapper');
 
         let PL = document.createElement('h5');
         PL.setAttribute('class', 'col s3 center-align');
@@ -126,6 +166,9 @@ class WordAdmin
 
     renderDictionaryToNode(dictionary, node)
     {
+        //Gods forgive me please
+        node.innerHTML = "";
+
         dictionary.forEach(function(element) {
             node.appendChild(this.composeDictionaryEntry(element));
         }, this);
