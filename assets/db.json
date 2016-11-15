@@ -866,5 +866,215 @@
         "cz": "statická soustava",
         "imgPath": "",
         "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "stavová rovnice",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "stav systému",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "struktura systému",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "subsystém",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "sumační člen",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "symetrie",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "syntéza",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "systém",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "technologický proces",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "teploměr",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "termočlánek",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "termostat",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "tlakoměr",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "tlumení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "transformace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "trojrozměrný",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "tvarovač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "ventil",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "vlhkoměr",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "input quantity",
+        "cz": "vstupní veličina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wartość wyjściowa",
+        "en": "output value",
+        "cz": "výstupní veličina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "flow diagram",
+        "cz": "vývojový diagram",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "vzorkování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "vzorkovací perioda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "výrobní cyklus",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "vzorkování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wzmacniacz",
+        "en": "amplifier",
+        "cz": "zesilovač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zniekształcenie",
+        "en": "distortion",
+        "cz": "zkreslení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sprzężenie zwrotne",
+        "en": "feedback",
+        "cz": "zpětná vazba",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "przetwarzanie informacji",
+        "en": "information processing",
+        "cz": "zpracování informace",
+        "imgPath": "",
+        "symbol" : ""
     }
 ]
