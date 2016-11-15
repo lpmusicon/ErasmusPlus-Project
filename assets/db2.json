@@ -131,5 +131,54 @@
         "cz": "dioda",
         "imgPath": "img/dioda_photo.png",
         "symbol" : "img/dioda.jpg"
+    },
+    {
+        "pl": "multimetr cyfrowy",
+        "en": "digital multimeter",
+        "cz": "digitální multimetr",
+        "imgPath": "img/multimeter_digital_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "diak",
+        "en": "diak",
+        "cz": "diak",
+        "imgPath": "img/diak_photo.jpg",
+        "symbol" : "img/diak.png"
+    },
+    {
+        "pl": "dzielnik napięcia",
+        "en": "voltage divider",
+        "cz": "dělič napětí",
+        "imgPath": "img/voltage_divider_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "rozdzielacz przepływu",
+        "en": "a flow divider",
+        "cz": "dělič proudu",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "obwód elektryczny",
+        "en": "electrical circuit",
+        "cz": "elektrický obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "rura próżniowa",
+        "en": "vacuum tube",
+        "cz": "elektronka",
+        "imgPath": "img/vacuum_tube_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "fala elektromagnetyczna",
+        "en": "electromagnetic wave",
+        "cz": "elektromagnetická vlna",
+        "imgPath": "img/electromagnetic_wave_photo.png",
+        "symbol" : ""
     }
 ]
