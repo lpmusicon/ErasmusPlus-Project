@@ -1,16 +1,65 @@
 [
     {
-        "pl": "BalPL",
-        "en": "BalEN",
-        "cz": "BalCZ",
+        "pl": "akumulator",
+        "en": "accumulator",
+        "cz": "akumulátor",
         "imgPath": "assets/error.svg",
         "symbol" : "assets/error.svg"
     },
     {
-        "pl": "BalePL",
-        "en": "BaleEN",
-        "cz": "BaleCZ",
-        "imgPath": "assets/search.svg",
-        "symbol" : "assets/search.svg"
+        "pl": "alternator",
+        "en": "ac generator",
+        "cz": "alternátor",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "analogowy",
+        "en": "analogr",
+        "cz": "analogový",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "multimetr analogowy",
+        "en": "analog multimeter",
+        "cz": "analogový multimetr",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "antena",
+        "en": "antenna / aerial",
+        "cz": "anténa",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "amperomierz",
+        "en": "ammeter",
+        "cz": "ampérmetr",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "astabilny przerzutnik",
+        "en": "astable flip-flop circuit",
+        "cz": "astabilní klopný obvod",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    }, 
+    {
+        "pl": "astabilny przerzutnik",
+        "en": "astable flip-flop circuit",
+        "cz": "astabilní klopný obvod",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
+    },
+    {
+        "pl": "astabilny przerzutnik",
+        "en": "astable flip-flop circuit",
+        "cz": "astabilní klopný obvod",
+        "imgPath": "assets/error.svg",
+        "symbol" : "assets/error.svg"
     }
 ]
