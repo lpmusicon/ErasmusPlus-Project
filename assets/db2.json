@@ -3,63 +3,133 @@
         "pl": "akumulator",
         "en": "accumulator",
         "cz": "akumulátor",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "img/accumulator_photo.png",
+        "symbol" : "img/accumulator.png"
     },
     {
         "pl": "alternator",
         "en": "ac generator",
         "cz": "alternátor",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "img/alternator.jpg",
+        "symbol" : "img/alternator_photo.png"
     },
     {
         "pl": "analogowy",
         "en": "analogr",
         "cz": "analogový",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "",
+        "symbol" : ""
     },
     {
         "pl": "multimetr analogowy",
         "en": "analog multimeter",
         "cz": "analogový multimetr",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "img/analog_multimeter.png",
+        "symbol" : ""
     },
     {
         "pl": "antena",
         "en": "antenna / aerial",
         "cz": "anténa",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "img/antenna_photo.jpg",
+        "symbol" : "img/antenna.png"
     },
     {
         "pl": "amperomierz",
         "en": "ammeter",
         "cz": "ampérmetr",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "img/ammeter.png",
+        "symbol" : "img/ammeter_photo.png"
     },
     {
         "pl": "astabilny przerzutnik",
         "en": "astable flip-flop circuit",
         "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "imgPath": "",
+        "symbol" : ""
     }, 
     {
-        "pl": "astabilny przerzutnik",
-        "en": "astable flip-flop circuit",
-        "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "anoda",
+        "en": "anode",
+        "cz": "anoda",
+        "imgPath": "",
+        "symbol" : "img/anoda.svg"
     },
     {
-        "pl": "astabilny przerzutnik",
-        "en": "astable flip-flop circuit",
-        "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "atom",
+        "en": "atom",
+        "cz": "atom",
+        "imgPath": "",
+        "symbol" : "img/atom.png"
+    },
+    {
+        "pl": "amplituda",
+        "en": "amplitude",
+        "cz": "amplituda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "baza",
+        "en": "base",
+        "cz": "báze",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wzbudnica",
+        "en": "exciter",
+        "cz": "buzení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "cewka",
+        "en": "coil",
+        "cz": "cívka",
+        "imgPath": "img/coil_photo.png",
+        "symbol" : "img/coil.png"
+    },
+    {
+        "pl": "prawo Coulomba",
+        "en": "Coulomb's law",
+        "cz": "Coulombův zákon",
+        "imgPath": "img/coulomb.gif",
+        "symbol" : ""
+    },
+    {
+        "pl": "moc czynna",
+        "en": "active output",
+        "cz": "činný výkon",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "licznik",
+        "en": "counter",
+        "cz": "čítač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "display LED",
+        "en": "display LED",
+        "cz": "displej LED",
+        "imgPath": "img/display_led_photo.png",
+        "symbol" : "img/display_led.png"
+    },
+    {
+        "pl": "display LCD",
+        "en": "display LCD",
+        "cz": "displej LCD",
+        "imgPath": "img/display_led.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "dioda",
+        "en": "diode",
+        "cz": "dioda",
+        "imgPath": "img/dioda_photo.png",
+        "symbol" : "img/dioda.jpg"
     }
 ]
