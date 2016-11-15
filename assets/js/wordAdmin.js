@@ -12,6 +12,9 @@ class WordAdmin
         this.workingDictionary = [];
         this.downloadedDictionaryNode = null;
         this.workingDictionaryNode = null;
+
+        this.currentSymbol = document.createElement('input');
+        this.currentSymbol.setAttribute('type', 'file');
     }
 
     bindPolishInput(input)
@@ -32,6 +35,16 @@ class WordAdmin
         return this;
     }
 
+    bindSymbolInput(button)
+    {
+        console.log(this.currentSymbol.click());
+
+        button.onclick = function(e) { 
+            console.error(this); 
+            
+        };
+    }
+
     bindDownloadedDictionaryNode(node)
     {
         this.downloadedDictionaryNode = node;
@@ -44,22 +57,41 @@ class WordAdmin
         row1.setAttribute('class', 'row');
 
         let PL = document.createElement('h5');
-        PL.setAttribute('class', 'col s4 center-align');
-        PL.setAttribute('style', 'border-right: 1px solid grey');
+        PL.setAttribute('class', 'col s3 center-align');
+        PL.setAttribute('style', 'border-right: 1px solid #ccc; font-size: 1.3rem');
         PL.textContent = element.pl;
 
         let EN = document.createElement('h5');
         EN.setAttribute('class', 'col s4 center-align');
-        EN.setAttribute('style', 'border-right: 1px solid grey');
+        EN.setAttribute('style', 'border-right: 1px solid #ccc;font-size: 1.3rem');
         EN.textContent = element.en;
 
         let CZ = document.createElement('h5');
-        CZ.setAttribute('class', 'col s4 center-align');
+        CZ.setAttribute('class', 'col s3 center-align');
+        CZ.setAttribute('style', 'font-size: 1.3rem');
         CZ.textContent = element.cz;
+
+        let ROW = document.createElement('div');
+        ROW.setAttribute('class', 'col s2 right-align');
+
+        let EDIT = document.createElement('a');
+        EDIT.setAttribute('class', 'waves-effect waves-orange btn-flat');
+        EDIT.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
+        EDIT.innerHTML = '<i class="material-icons">edit</i>';
+
+        let DELETE = document.createElement('a');
+        DELETE.setAttribute('class', 'waves-effect waves-red btn-flat');
+        DELETE.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
+        DELETE.innerHTML = '<i class="material-icons">delete</i>';
 
         row1.appendChild(PL);
         row1.appendChild(EN);
         row1.appendChild(CZ);
+
+        ROW.appendChild(EDIT);
+        ROW.appendChild(DELETE);
+
+        row1.appendChild(ROW);
 
         let resultNode = document.createElement('div');
         resultNode.setAttribute('class', 'card ');
@@ -95,7 +127,7 @@ class WordAdmin
     renderDictionaryToNode(dictionary, node)
     {
         dictionary.forEach(function(element) {
-            node.appendChild(composeDictionaryEntry(element));
+            node.appendChild(this.composeDictionaryEntry(element));
         }, this);
     }
 
@@ -103,5 +135,11 @@ class WordAdmin
     {
         if(!this.downloadedDictionaryNode) return;
         this.renderDictionaryToNode(this.downloadedDictionary, this.downloadedDictionaryNode);
+    }
+
+    renderWorkingDictionary()
+    {
+        if(!this.workingDictionaryNode) return;
+        this.renderDictionaryToNode(this.workingDictionary, this.workingDictionaryNode);
     }
 }
