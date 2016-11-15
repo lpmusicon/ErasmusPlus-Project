@@ -1076,5 +1076,375 @@
         "cz": "zpracování informace",
         "imgPath": "",
         "symbol" : ""
+    },{
+        "pl": "akumulator",
+        "en": "accumulator",
+        "cz": "akumulátor",
+        "imgPath": "img/accumulator_photo.png",
+        "symbol" : "img/accumulator.png"
+    },
+    {
+        "pl": "alternator",
+        "en": "ac generator",
+        "cz": "alternátor",
+        "imgPath": "img/alternator.jpg",
+        "symbol" : "img/alternator_photo.png"
+    },
+    {
+        "pl": "analogowy",
+        "en": "analogr",
+        "cz": "analogový",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "multimetr analogowy",
+        "en": "analog multimeter",
+        "cz": "analogový multimetr",
+        "imgPath": "img/analog_multimeter.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "antena",
+        "en": "antenna / aerial",
+        "cz": "anténa",
+        "imgPath": "img/antenna_photo.jpg",
+        "symbol" : "img/antenna.png"
+    },
+    {
+        "pl": "amperomierz",
+        "en": "ammeter",
+        "cz": "ampérmetr",
+        "imgPath": "img/ammeter.png",
+        "symbol" : "img/ammeter_photo.png"
+    },
+    {
+        "pl": "astabilny przerzutnik",
+        "en": "astable flip-flop circuit",
+        "cz": "astabilní klopný obvod",
+        "imgPath": "",
+        "symbol" : ""
+    }, 
+    {
+        "pl": "anoda",
+        "en": "anode",
+        "cz": "anoda",
+        "imgPath": "",
+        "symbol" : "img/anoda.svg"
+    },
+    {
+        "pl": "atom",
+        "en": "atom",
+        "cz": "atom",
+        "imgPath": "",
+        "symbol" : "img/atom.png"
+    },
+    {
+        "pl": "amplituda",
+        "en": "amplitude",
+        "cz": "amplituda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "baza",
+        "en": "base",
+        "cz": "báze",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wzbudnica",
+        "en": "exciter",
+        "cz": "buzení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "cewka",
+        "en": "coil",
+        "cz": "cívka",
+        "imgPath": "img/coil_photo.png",
+        "symbol" : "img/coil.png"
+    },
+    {
+        "pl": "prawo Coulomba",
+        "en": "Coulomb's law",
+        "cz": "Coulombův zákon",
+        "imgPath": "img/coulomb.gif",
+        "symbol" : ""
+    },
+    {
+        "pl": "moc czynna",
+        "en": "active output",
+        "cz": "činný výkon",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "licznik",
+        "en": "counter",
+        "cz": "čítač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "display LED",
+        "en": "display LED",
+        "cz": "displej LED",
+        "imgPath": "img/display_led_photo.png",
+        "symbol" : "img/display_led.png"
+    },
+    {
+        "pl": "display LCD",
+        "en": "display LCD",
+        "cz": "displej LCD",
+        "imgPath": "img/display_led.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "dioda",
+        "en": "diode",
+        "cz": "dioda",
+        "imgPath": "img/dioda_photo.png",
+        "symbol" : "img/dioda.jpg"
+    },
+    {
+        "pl": "multimetr cyfrowy",
+        "en": "digital multimeter",
+        "cz": "digitální multimetr",
+        "imgPath": "img/multimeter_digital_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "diak",
+        "en": "diak",
+        "cz": "diak",
+        "imgPath": "img/diak_photo.jpg",
+        "symbol" : "img/diak.png"
+    },
+    {
+        "pl": "dzielnik napięcia",
+        "en": "voltage divider",
+        "cz": "dělič napětí",
+        "imgPath": "img/voltage_divider_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "rozdzielacz przepływu",
+        "en": "a flow divider",
+        "cz": "dělič proudu",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "obwód elektryczny",
+        "en": "electrical circuit",
+        "cz": "elektrický obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "rura próżniowa",
+        "en": "vacuum tube",
+        "cz": "elektronka",
+        "imgPath": "img/vacuum_tube_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "fala elektromagnetyczna",
+        "en": "electromagnetic wave",
+        "cz": "elektromagnetická vlna",
+        "imgPath": "img/electromagnetic_wave_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "ładunek elektryczny",
+        "en": "electric charge",
+        "cz": "elektrický náboj",
+        "imgPath": "img/electric_charge_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "energia",
+        "en": "energy",
+        "cz": "energie",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "pole elektrostatyczne",
+        "en": "electrostatical field",
+        "cz": "elektrostatické pole",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "indukcja elektromagnetyczna",
+        "en": "electromagnetic induction",
+        "cz": "elektromagnetická indukce",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "elektron",
+        "en": "electron",
+        "cz": "elektron",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "fotorezystor",
+        "en": "photoresist",
+        "cz": "fotorezistor",
+        "imgPath": "img/photoresist_photo.png",
+        "symbol" : "img/photoresist.png"
+    },
+    {
+        "pl": "ogniwo fotowoltaiczne",
+        "en": "photovoltaic cell",
+        "cz": "fotovoltaický článek",
+        "imgPath": "img/photovoltaic_cell_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "tranzystor elektrooptyczny",
+        "en": "electrooptical transistor",
+        "cz": "fototranzistor",
+        "imgPath": "",
+        "symbol" : "img/electrooptical_transistor.png"
+    },
+    {
+        "pl": "fotodioda",
+        "en": "photodiode",
+        "cz": "fotodioda",
+        "imgPath": "img/photo_diode_photo.png",
+        "symbol" : "img/photo_diode.png"
+    },
+    {
+        "pl": "filtr RC",
+        "en": "RC filter",
+        "cz": "filtr RC",
+        "imgPath": "",
+        "symbol" : "img/rc_filter.png"
+    },
+    {
+        "pl": "filtr LC",
+        "en": "LC filter",
+        "cz": "filtr LC",
+        "imgPath": "",
+        "symbol" : "img/lc_filter.gif"
+    },
+    {
+        "pl": "przesunięcie fazowe",
+        "en": "phase shift",
+        "cz": "fázový posun",
+        "imgPath": "img/phase_shift.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "wykres wskazowy",
+        "en": "phasor diagram",
+        "cz": "fázorový diagram",
+        "imgPath": "img/phasor_diagram_photo.gif",
+        "symbol" : ""
+    },
+    {
+        "pl": "częstotliwość",
+        "en": "frequency",
+        "cz": "frekvence",
+        "imgPath": "img/frequency.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "foton",
+        "en": "photon",
+        "cz": "foton",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "farad",
+        "en": "farad",
+        "cz": "farad",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "Prawo indukcji elektromagnetycznej Faradaya",
+        "en": "Faraday's law of induction",
+        "cz": "Faradayův indukční zákon",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "tyrystor GTO",
+        "en": "GTO thyristor",
+        "cz": "GTO tyristor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "generator sygnału",
+        "en": "signal generator",
+        "cz": "generátor signálů",
+        "imgPath": "img/signal_generator_photo.jpg",
+        "symbol" : ""
+    },
+    {
+        "pl": "artykuł Halla",
+        "en": "Hall's article",
+        "cz": "Hallův článek",
+        "imgPath": "img/halls_article_photo.jpg",
+        "symbol" : ""
+    },
+    {
+        "pl": "dioda cylindryczna",
+        "en": "cylindrical diode",
+        "cz": "hrotová dioda",
+        "imgPath": "img/cylindrical_diode_photo.jpg",
+        "symbol" : ""
+    },
+    {
+        "pl": "histereza",
+        "en": "hysteresis",
+        "cz": "hystereze",
+        "imgPath": "img/hysteresis_photo.png",
+        "symbol" : ""
+    },
+    {
+        "pl": "izolator",
+        "en": "insulant",
+        "cz": "izolant",
+        "imgPath": "img/insulant.jpg",
+        "symbol" : ""
+    },
+    {
+        "pl": "układ scalony",
+        "en": "integrated circuit",
+        "cz": "integrovaný obvod",
+        "imgPath": "img/integrated_circuit_photo.jpg",
+        "symbol" : ""
+    },
+    {
+        "pl": "dioda LED na podczerwień",
+        "en": "infrared LED",
+        "cz": "infračervená LED",
+        "imgPath": "img/infrated_led_photo.jpg",
+        "symbol" : "img/infrated_led.png"
+    },
+    {
+        "pl": "indukcyjność",
+        "en": "inductance",
+        "cz": "indukčnost",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "intensywność",
+        "en": "intensity",
+        "cz": "intenzita",
+        "imgPath": "",
+        "symbol" : ""
     }
 ]
