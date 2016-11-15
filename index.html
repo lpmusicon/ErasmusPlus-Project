@@ -28,14 +28,14 @@
                 </p>
             </div>
             <div class="row">
-                <span id="resultElement"></span>
-            </div>
-            <div class="row">
                 <div class="col s12 center-align">
                     <button class="btn-floating btn-large indigo center-align" id="triggerButton">
                         <i class="material-icons">search</i>
                     </button>
                 </div>
+            </div>
+            <div class="row">
+                <span id="resultElement"></span>
             </div>
             <div id="list" class="row"></div>
         </div>
@@ -53,8 +53,14 @@
 
                 let wordFinder = new WordFinder(langCollection, inputElement, resultElement, data, list);
                 triggerButton.onclick = function(e) { wordFinder.renderMatch() };
-                wordFinder.renderList();
-                
+
+                /* 
+                TODO:
+                    Admin panel
+                    Edycja
+                    Dodawanie
+                    Usuwanie
+                */
             })
             .catch(console.error);
         </script>

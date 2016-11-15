@@ -1,6 +1,7 @@
 "use strict";
 
-class WordFinder {
+class WordFinder 
+{
     constructor(langCollection, inputElement, resultEl, dictionary, listElement) {
         this.langCollection = langCollection;
         this.inputEl = inputElement;
@@ -14,8 +15,8 @@ class WordFinder {
             'pl':'Nie znaleziono', 
             'en':'Not found', 
             'cz':'???', 
-            'imgPath':'assets/error.svg', 
-            'symbol':'assets/error.svg'
+            'imgPath': '', 
+            'symbol': ''
         };
     }
 
@@ -55,17 +56,17 @@ class WordFinder {
         let row1 = document.createElement('div');
         row1.setAttribute('class', 'row');
 
-        let PL = document.createElement('h4');
+        let PL = document.createElement('h5');
         PL.setAttribute('class', 'col s4 center-align');
         PL.setAttribute('style', 'border-right: 1px solid grey');
         PL.textContent = node.pl;
 
-        let EN = document.createElement('h4');
+        let EN = document.createElement('h5');
         EN.setAttribute('class', 'col s4 center-align');
         EN.setAttribute('style', 'border-right: 1px solid grey');
         EN.textContent = node.en;
 
-        let CZ = document.createElement('h4');
+        let CZ = document.createElement('h5');
         CZ.setAttribute('class', 'col s4 center-align');
         CZ.textContent = node.cz;
 
