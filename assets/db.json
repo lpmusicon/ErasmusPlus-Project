@@ -1,65 +1,870 @@
 [
     {
-        "pl": "akumulator",
-        "en": "accumulator",
-        "cz": "akumulátor",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "siłownik",
+        "en": "actuator",
+        "cz": "akční člen",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "alternator",
-        "en": "ac generator",
-        "cz": "alternátor",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "zmienna manipulowana",
+        "en": "manipulated variable",
+        "cz": "akční veličina",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "analogowy",
-        "en": "analogr",
-        "cz": "analogový",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "algorytm",
+        "en": "algorithm",
+        "cz": "algoritmus",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "multimetr analogowy",
-        "en": "analog multimeter",
-        "cz": "analogový multimetr",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "aliasing",
+        "en": "aliasing",
+        "cz": "aliasing",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "antena",
-        "en": "antenna / aerial",
-        "cz": "anténa",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "amplituda",
+        "en": "amplitude",
+        "cz": "amplituda",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "amperomierz",
-        "en": "ammeter",
-        "cz": "ampérmetr",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "modulacja amplitudy",
+        "en": "amplitude modulation",
+        "cz": "amplitudová modulace",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "astabilny przerzutnik",
-        "en": "astable flip-flop circuit",
-        "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
-    }, 
-    {
-        "pl": "astabilny przerzutnik",
-        "en": "astable flip-flop circuit",
-        "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "sygnał analogowy",
+        "en": "analog signal",
+        "cz": "analogový signál",
+        "imgPath": "",
+        "symbol" : ""
     },
     {
-        "pl": "astabilny przerzutnik",
-        "en": "astable flip-flop circuit",
-        "cz": "astabilní klopný obvod",
-        "imgPath": "assets/error.svg",
-        "symbol" : "assets/error.svg"
+        "pl": "ADC",
+        "en": "analogue to digital converter",
+        "cz": "analogově digitální převodník",
+        "imgPath": "",
+        "symbol" : "img/adc.png"
+    },
+    {
+        "pl": "przybliżenie",
+        "en": "approximation",
+        "cz": "aproximace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "astabilny",
+        "en": "astable",
+        "cz": "astabilní",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna ochrona",
+        "en": "automatic protection",
+        "cz": "automatická ochrana",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna kontrola",
+        "en": "automatic control",
+        "cz": "automatické řízení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczna sygnalizacja",
+        "en": "automatic signalling",
+        "cz": "automatická signalizace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyczny zawór",
+        "en": "automatic valve",
+        "cz": "automatický ventil",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "automatyzacja",
+        "en": "automation",
+        "cz": "automatizace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "flip-flop",
+        "en": "flip-flop",
+        "cz": "bistabilní klopný obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "kod binarny",
+        "en": "binary code",
+        "cz": "binární kód",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sterowanie cyfrowe",
+        "en": "digital control",
+        "cz": "číslicový regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "licznik",
+        "en": "counter",
+        "cz": "čítač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dane",
+        "en": "data",
+        "cz": "data",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zdalne sterowanie",
+        "en": "remote control",
+        "cz": "dálková regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "pomiar zdalny",
+        "en": "remote measurement",
+        "cz": "dálkové měření",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zdalna transmisja",
+        "en": "remote transmission",
+        "cz": "dálkový přenos",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wyróżnikiem",
+        "en": "differentiator",
+        "cz": "derivační člen",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "sygnał cyfrowy",
+        "en": "digital signal",
+        "cz": "digitální signál",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "równania różniczkowe",
+        "en": "differential equation",
+        "cz": "diferenciální rovnice",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "impuls Diraca",
+        "en": "Dirac impulse",
+        "cz": "Diracův impuls",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dyskretny regulator",
+        "en": "discrete controller",
+        "cz": "diskrétní regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "najechać",
+        "en": "overrun",
+        "cz": "doběh motoru",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "opóźnienia w ruchu",
+        "en": "traffic delays",
+        "cz": "dopravní zpoždění",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dyskretny regulator",
+        "en": "discrete controller",
+        "cz": "diskrétní regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "Regulacja położenia",
+        "en": "position control",
+        "cz": "dvoupolohová regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "dynamika układu",
+        "en": "system dynamics",
+        "cz": "dynamika systému",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "programowanie dynamiczne",
+        "en": "dynamic programming",
+        "cz": "dynamické programování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "własności dynamiczne",
+        "en": "dynamic properties",
+        "cz": "dynamické vlastnosti",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "wartość skuteczna",
+        "en": "effective value",
+        "cz": "efektivní hodnota",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "rozporządzenie OTC",
+        "en": "OTC regulation",
+        "cz": "ekvitermní regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "faza",
+        "en": "phase",
+        "cz": "fáze",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "modulacja fazowa",
+        "en": "phase modulation",
+        "cz": "fázová modulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "przesunięcie fazowe",
+        "en": "phase shift",
+        "cz": "fázový posun",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "filtr",
+        "en": "filter",
+        "cz": "filtr",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "fotokomórka",
+        "en": "photocell",
+        "cz": "fotočlánek",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "modulacja częstotliwości",
+        "en": "frequency modulation",
+        "cz": "frekvenční modulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "charakterystyczną częstotliwość",
+        "en": "frequency characteristic",
+        "cz": "frekvenční charakteristika",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "logika rozmyta",
+        "en": "fuzzy logic",
+        "cz": "fuzzy logika",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "zestaw rozmyty",
+        "en": "fuzzy set",
+        "cz": "fuzzy množina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "skok Heaviside",
+        "en": "Heaviside jump",
+        "cz": "Heavisideův skok",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "pilot wielofunkcyjny",
+        "en": "multiple remote control",
+        "cz": "hromadné dálkové ovládání",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "matryca Hurwitza",
+        "en": "Hurwitz matrix",
+        "cz": "Hurwitzova matice",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "histogram",
+        "en": "histogram",
+        "cz": "histogram",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "modulacja impulsów",
+        "en": "pulse modulation",
+        "cz": "impulsní modulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "informacja",
+        "en": "information",
+        "cz": "informace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "całkujący",
+        "en": "integral term",
+        "cz": "integrační člen",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "intensywność",
+        "en": "intensity",
+        "cz": "intenzita",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "interaktywny",
+        "en": "interactive",
+        "cz": "interaktivní",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "odwrotność",
+        "en": "inverse",
+        "cz": "inverzní",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "urojony",
+        "en": "imaginary",
+        "cz": "imaginární",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "czujnik indukcyjny",
+        "en": "inductive sensor",
+        "cz": "indukční snímač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "przedział",
+        "en": "interval",
+        "cz": "interval",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "system pomiaru informacji",
+        "en": "information measuring system",
+        "cz": "informační měřící systém",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "obwód zintegrowany",
+        "en": "integrated circuit",
+        "cz": "integrovaný obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "czujnik pojemnościowy",
+        "en": "capacitive sensor",
+        "cz": "kapacitní snímač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "flipf",
+        "en": "flipf",
+        "cz": "klopný obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "korekce",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "korelace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "kritéria",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "kvantování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "lazení",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "logical circuit",
+        "cz": "logický obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "logické funkce",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "měření",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "měřící řetězec",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "měřicí přístroj",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "měřící systém",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "metoda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "mez stability",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "monitorování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "discontinuous regulation",
+        "cz": "nespojitá regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "Nyquistovo kritérium stability",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "offset",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "odporový snímač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "okamžitá hodnota",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "opakování",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "otevřený regulační obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "ovládání",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "parametr",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "perioda",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "PID regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "piezoelektrický snímač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "PLC",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "poloha",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "poruchová veličina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "proces",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "program",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "prvek",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "překmit",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "přesnost",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "převodník",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "reálný čas",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "regulační obvod",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "regulační odchylka",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "regulátor",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "regulovaná soustava",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "reverzace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "robot",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "řídící jednotka",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "řídící počítač",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "řídící veličina",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "sekvence",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "simulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "síť",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "snímač polohy",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "snímač otáček",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "snímač teploty",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "snímač tlaku",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "snímač výšky hladiny",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "soustava",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "soustava druhého řádu",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "soustava nultého řádu",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "soustava prvního řádu",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "spojitá regulace",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "stabilita",
+        "imgPath": "",
+        "symbol" : ""
+    },
+    {
+        "pl": "",
+        "en": "",
+        "cz": "statická soustava",
+        "imgPath": "",
+        "symbol" : ""
     }
 ]
