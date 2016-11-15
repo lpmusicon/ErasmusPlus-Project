@@ -73,24 +73,33 @@ class WordFinder {
         row1.appendChild(EN);
         row1.appendChild(CZ);
 
-        let row2 = document.createElement('div');
-        row2.setAttribute('class', 'row');
-
-        let IMG = document.createElement('img');
-        IMG.setAttribute('class', 'col s6 center-align');
-        IMG.setAttribute('src', node.imgPath);
-
-        let SYMBOL = document.createElement('img');
-        SYMBOL.setAttribute('class', 'col s6 center-align');
-        SYMBOL.setAttribute('src', node.symbol);
-
-        row2.appendChild(IMG);
-        row2.appendChild(SYMBOL);
-
         let resultNode = document.createElement('div');
         resultNode.setAttribute('class', 'card ');
         resultNode.appendChild(row1);
-        resultNode.appendChild(row2);
+
+        let row2 = document.createElement('div');
+        row2.setAttribute('class', 'row');
+
+        if(node.imgPath.toString().length > 0)
+        {
+            let IMG = document.createElement('img');
+            IMG.setAttribute('class', 'col s6 center-align');
+            IMG.setAttribute('src', node.imgPath);
+            row2.appendChild(IMG);
+        }
+
+        if(node.symbol.toString().length > 0)
+        {
+            let SYMBOL = document.createElement('img');
+            SYMBOL.setAttribute('class', 'col s6 center-align');
+            SYMBOL.setAttribute('src', node.symbol);
+            row2.appendChild(SYMBOL);
+        }
+
+        if(node.symbol.toString().length > 0 || node.imgPath.toString().length > 0)
+        {
+            resultNode.appendChild(row2);
+        }
 
         return resultNode;
     }
