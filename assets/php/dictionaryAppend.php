@@ -33,6 +33,7 @@ function appendEntry($dictionary, $entry)
 
 function readFromStream()
 {
+    var_dump($_POST);
     $entry = json_decode($_POST['entry'], true);
     $symbols = $_FILES["symbols"];
     $images = $_FILES["images"];

@@ -43,9 +43,6 @@ class WordAdmin
         this.englishInput.value = "";
         this.czechInput.value = "";
 
-        this.currentSymbol.setAttribute('type', 'text');
-        this.currentSymbol.setAttribute('type', 'file');
-
         this.postToServer();
     }
 
@@ -53,18 +50,32 @@ class WordAdmin
     {
         let fData = new FormData();
         fData.append("entry", JSON.stringify(this.workingDictionary));
-        fData.append("symbols[]", this.currentSymbol.value);
-        fData.append("images[]", this.currentPhoto.value);
+        console.log(this.currentSymbol.files);
+        fData.append("symbols[]", this.currentSymbol.files[0], this.currentSymbol.value);
+        fData.append("images[]", this.currentPhoto.files[0], this.currentPhoto.value);
 
-        $.ajax({
-            url: "assets/php/dictionaryAppend.php",
-            type: 'POST',
-            processData: false,
-            data: fData,
-            success: function(response) {
-              console.log(response);
-            }
-        });
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'assets/php/dictionaryAppend.php', true);
+
+        var a = this;
+        xhr.onreadystatechange = function(e) {
+            a.fetchDictionary();
+        }
+        xhr.send(fData);
+    }
+
+    fetchDictionary()
+    {
+        var a = this;
+        fetch("assets/db.json")
+            .then(function(response)
+            {
+                return response.json();
+            })
+            .then(function(downloadedDictionary)
+            {
+                a.bindDownloadedDictionary(downloadedDictionary).renderDownloadedDictionary();
+            });
     }
 
     bindPolishInput(input)
@@ -107,6 +118,12 @@ class WordAdmin
         button.onclick = function(e) {
             wa.addNewEntry();
         }
+    }
+
+    bindDownloadedDictionary(dict)
+    {
+        this.downloadedDictionary = dict;
+        return this;
     }
 
     bindDownloadedDictionaryNode(node)
