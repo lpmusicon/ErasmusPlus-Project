@@ -29,17 +29,17 @@
 
             <div class="row">
                 <div class="col s5 right-align">
-                    <button class="blue waves-effect btn disabled" id="photoButton">
-                        Add Photo <i class="material-icons right">add_a_photo</i> 
+                    <button class="blue waves-effect btn" id="photoButton">
+                        Add Photo <i class="material-icons right">add_a_photo</i>
                     </button>
                 </div>
                 <div class="col s2 center-align">
                     <button class="indigo waves-effect btn" id="addButton">
-                        <i class="material-icons">add</i> 
+                        <i class="material-icons">add</i>
                     </button>
                 </div>
                 <div class="col s5 left-align">
-                    <button class="btn blue waves-effect center-align disabled" id="symbolButton">
+                    <button class="btn blue waves-effect center-align" id="symbolButton">
                         <i class="material-icons right">add_a_photo</i>
                         Add Symbol
                     </button>
@@ -57,16 +57,17 @@
         </div>
         <script>
         fetch("assets/db.json")
-            .then(function(response) 
+            .then(function(response)
             {
                 return response.json();
             })
-            .then(function(downloadedDictionary) 
+            .then(function(downloadedDictionary)
             {
                 let inputPL = document.getElementById("pl");
                 let inputCZ = document.getElementById("cz");
                 let inputEN = document.getElementById("en");
                 let symbolBtn = document.getElementById("symbolButton");
+                let photoBtn = document.getElementById("photoButton");
                 let addBtn = document.getElementById("addButton");
 
                 let wordAdmin = new WordAdmin( downloadedDictionary, inputPL, inputEN, inputCZ );
@@ -75,10 +76,10 @@
 
                 wordAdmin.bindDownloadedDictionaryNode( downloadedDictionaryNode ).renderDownloadedDictionary();
                 wordAdmin.bindWorkingDictionaryNode( workingDictionaryNode ).renderWorkingDictionary();
-                
+
                 wordAdmin.bindAddButton(addBtn);
-                //DOES NOT WORK Dunno Why
                 wordAdmin.bindSymbolInput(symbolBtn);
+                wordAdmin.bindPhotoInput(photoBtn);
             })
             .catch(console.error);
         </script>

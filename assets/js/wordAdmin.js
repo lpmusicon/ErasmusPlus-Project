@@ -2,7 +2,7 @@
 
 class WordAdmin
 {
-    constructor(downloadedDictionary, polishInput, englishInput, czechInput) 
+    constructor(downloadedDictionary, polishInput, englishInput, czechInput)
     {
         this.downloadedDictionary = downloadedDictionary;
         this.polishInput = polishInput;
@@ -15,6 +15,9 @@ class WordAdmin
 
         this.currentSymbol = document.createElement('input');
         this.currentSymbol.setAttribute('type', 'file');
+
+        this.currentPhoto = document.createElement('input');
+        this.currentPhoto.setAttribute('type', 'file');
     }
 
     addNewEntry()
@@ -68,8 +71,16 @@ class WordAdmin
     bindSymbolInput(button)
     {
         var cs = this.currentSymbol;
-        button.onclick = function(e) { 
+        button.onclick = function(e) {
             cs.click();
+        };
+    }
+
+    bindPhotoInput(button)
+    {
+        var cp = this.currentPhoto;
+        button.onclick = function(e) {
+            cp.click();
         };
     }
 
@@ -94,7 +105,7 @@ class WordAdmin
     }
 
 
-    composeDictionaryEntry(element) 
+    composeDictionaryEntry(element)
     {
         let row1 = document.createElement('div');
         row1.setAttribute('class', 'row valign-wrapper');
@@ -118,12 +129,12 @@ class WordAdmin
         ROW.setAttribute('class', 'col s2 right-align');
 
         let EDIT = document.createElement('a');
-        EDIT.setAttribute('class', 'waves-effect waves-orange btn-flat');
+        EDIT.setAttribute('class', 'waves-effect waves-orange btn-flat disabled');
         EDIT.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
         EDIT.innerHTML = '<i class="material-icons">edit</i>';
 
         let DELETE = document.createElement('a');
-        DELETE.setAttribute('class', 'waves-effect waves-red btn-flat');
+        DELETE.setAttribute('class', 'waves-effect waves-red btn-flat disabled');
         DELETE.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
         DELETE.innerHTML = '<i class="material-icons">delete</i>';
 
