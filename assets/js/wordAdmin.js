@@ -40,7 +40,10 @@ class WordAdmin
         this.englishInput.value = "";
         this.czechInput.value = "";
 
-        this.renderWorkingDictionary();
+        this.currentSymbol.setAttribute('type', 'text');
+        this.currentSymbol.setAttribute('type', 'file');
+
+        this.postToServer();
 
     }
 
