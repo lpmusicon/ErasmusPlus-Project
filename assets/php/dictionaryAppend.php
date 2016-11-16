@@ -26,8 +26,9 @@ function saveDictionary($dictionary, string $filename)
 function appendEntry($dictionary, $entry)
 {
     $workingEntry = $entry["entry"];
-    $workingEntry["imgPath"] = $entry["images"][0] == NULL ? "" : $entry["images"][0];
-    $workingEntry["symbol"] = $entry["symbols"][0] == NULL ? "" : $entry["symbols"][0];
+    $workingEntry["imgPath"] = $entry["image"] == NULL ? "" : $entry["image"];
+    $workingEntry["symbol"] = $entry["symbol"] == NULL ? "" : $entry["symbol"];
+    
     array_push($dictionary, $workingEntry);
 
     return $dictionary;
