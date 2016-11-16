@@ -146,7 +146,7 @@ class WordAdmin
     composeDictionaryEntry(element)
     {
         let row1 = document.createElement('div');
-        row1.setAttribute('class', 'row valign-wrapper');
+        row1.setAttribute('class', 'row');
 
         let PL = document.createElement('h5');
         PL.setAttribute('class', 'col s3 center-align');
@@ -186,25 +186,27 @@ class WordAdmin
         row1.appendChild(ROW);
 
         let resultNode = document.createElement('div');
-        resultNode.setAttribute('class', 'card ');
+        resultNode.setAttribute('class', 'card z-depth-2');
         resultNode.appendChild(row1);
 
         let row2 = document.createElement('div');
-        row2.setAttribute('class', 'row');
+        row2.setAttribute('class', 'row center-align');
 
         if(element.imgPath.toString().length > 0)
         {
             let IMG = document.createElement('img');
-            IMG.setAttribute('class', 'col s6 center-align');
+            IMG.setAttribute('class', 'center-align valign');
             IMG.setAttribute('src', element.imgPath);
+            IMG.setAttribute('style', "max-height: 250px; margin-top: 64px; margin-bottom: 36px");
             row2.appendChild(IMG);
         }
 
         if(element.symbol.toString().length > 0)
         {
             let SYMBOL = document.createElement('img');
-            SYMBOL.setAttribute('class', 'col s6 center-align');
+            SYMBOL.setAttribute('class', 'center-align valign');
             SYMBOL.setAttribute('src', element.symbol);
+            SYMBOL.setAttribute('style', "max-height: 250px; margin-left: 36px; margin-bottom: 36px;");
             row2.appendChild(SYMBOL);
         }
 
