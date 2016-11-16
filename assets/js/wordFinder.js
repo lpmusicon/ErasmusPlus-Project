@@ -1,6 +1,6 @@
 "use strict";
 
-class WordFinder 
+class WordFinder
 {
     constructor(langCollection, inputElement, resultEl, dictionary, listElement) {
         this.langCollection = langCollection;
@@ -12,10 +12,10 @@ class WordFinder
 
     generateNotFoundTemplate() {
         return {
-            'pl':'Nie znaleziono', 
-            'en':'Not found', 
-            'cz':'???', 
-            'imgPath': '', 
+            'pl':'Nie znaleziono',
+            'en':'Not found',
+            'cz':'???',
+            'imgPath': '',
             'symbol': ''
         };
     }
@@ -24,14 +24,14 @@ class WordFinder
         let inputValue = this.inputEl.value.toLowerCase();
         let lang = null;
         let node = this.generateNotFoundTemplate();
-        
+
         this.langCollection.forEach(function(element) {
-            if(element.checked) 
+            if(element.checked)
                 lang = element.value.toLowerCase();
         }, this);
 
         this.dictionary.forEach(function (dictionaryNode) {
-            if(dictionaryNode[lang].toLowerCase() == inputValue.toLowerCase()) 
+            if(dictionaryNode[lang].toLowerCase() == inputValue.toLowerCase())
                 node = dictionaryNode;
         }, this);
 
@@ -75,25 +75,27 @@ class WordFinder
         row1.appendChild(CZ);
 
         let resultNode = document.createElement('div');
-        resultNode.setAttribute('class', 'card ');
+        resultNode.setAttribute('class', 'card z-depth-2');
         resultNode.appendChild(row1);
 
         let row2 = document.createElement('div');
-        row2.setAttribute('class', 'row');
+        row2.setAttribute('class', 'row center-align');
 
         if(node.imgPath.toString().length > 0)
         {
             let IMG = document.createElement('img');
-            IMG.setAttribute('class', 'col s6 center-align');
+            IMG.setAttribute('class', ' center-align valign');
             IMG.setAttribute('src', node.imgPath);
+            IMG.setAttribute('style', "max-height: 250px; margin-top: 64px; margin-bottom: 36px");
             row2.appendChild(IMG);
         }
 
         if(node.symbol.toString().length > 0)
         {
             let SYMBOL = document.createElement('img');
-            SYMBOL.setAttribute('class', 'col s6 center-align');
+            SYMBOL.setAttribute('class', 'center-align valign');
             SYMBOL.setAttribute('src', node.symbol);
+            SYMBOL.setAttribute('style', "max-height: 250px; margin-left: 36px; margin-bottom: 36px;");
             row2.appendChild(SYMBOL);
         }
 

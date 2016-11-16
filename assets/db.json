@@ -1124,7 +1124,7 @@
         "cz": "astabilní klopný obvod",
         "imgPath": "",
         "symbol" : ""
-    }, 
+    },
     {
         "pl": "anoda",
         "en": "anode",
@@ -1165,7 +1165,7 @@
         "en": "coil",
         "cz": "cívka",
         "imgPath": "img/coil_photo.png",
-        "symbol" : "img/coil.png"
+        "symbol" : "img/coil.jpg"
     },
     {
         "pl": "prawo Coulomba",
