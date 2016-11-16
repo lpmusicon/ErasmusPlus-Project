@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/materialize.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="assets/js/materialize.min.js"></script>
+        <script src="assets/js/sha256.js"></script>
+        <script src="assets/js/passwordUtility.js"></script>
+        <script src="assets/js/wordAdmin.js"></script>
+    </head>
+    <body class="grey lighten-5">
+        <div class="container" style="margin-top: 2em;">
+            <div class="row">
+                <p class="col s4 center-align input-field">
+                    <input type="text" id="pl"/>
+                    <label for="pl">Polski</label>
+                </p>
+                <p class="col s4 center-align input-field">
+                    <input type="text" id="cz"/>
+                    <label for="cz">Cestina</label>
+                </p>
+                <p class="col s4 center-align input-field">
+                    <input type="text" id="en"/>
+                    <label for="en">English</label>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col s5 right-align">
+                    <button class="blue waves-effect btn" id="photoButton">
+                        Add Photo <i class="material-icons right">add_a_photo</i>
+                    </button>
+                </div>
+                <div class="col s2 center-align">
+                    <button class="indigo waves-effect btn" id="addButton">
+                        <i class="material-icons">add</i>
+                    </button>
+                </div>
+                <div class="col s5 left-align">
+                    <button class="btn blue waves-effect center-align" id="symbolButton">
+                        <i class="material-icons right">add_a_photo</i>
+                        Add Symbol
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <span id="currentUnsaved"></span>
+            </div>
+            <div class="row">
+                <h5>Saved</h5>
+                <span id="downloadedDictionary"></span>
+            </div>
+            <div id="list" class="row"></div>
+        </div>
+        <script>
+        fetch("assets/db.json")
+            .then(function(response)
+            {
+                return response.json();
+            })
+            .then(function(downloadedDictionary)
+            {
+                let inputPL = document.getElementById("pl");
+                let inputCZ = document.getElementById("cz");
+                let inputEN = document.getElementById("en");
+                let symbolBtn = document.getElementById("symbolButton");
+                let photoBtn = document.getElementById("photoButton");
+                let addBtn = document.getElementById("addButton");
+
+                let wordAdmin = new WordAdmin( downloadedDictionary, inputPL, inputEN, inputCZ );
+                let downloadedDictionaryNode = document.getElementById("downloadedDictionary");
+                let workingDictionaryNode = document.getElementById("currentUnsaved");
+
+                wordAdmin.bindDownloadedDictionaryNode( downloadedDictionaryNode ).renderDownloadedDictionary();
+                wordAdmin.bindWorkingDictionaryNode( workingDictionaryNode ).renderWorkingDictionary();
+
+                wordAdmin.bindAddButton(addBtn);
+                wordAdmin.bindSymbolInput(symbolBtn);
+                wordAdmin.bindPhotoInput(photoBtn);
+            })
+            .catch(console.error);
+        </script>
+    </body>
+</html>

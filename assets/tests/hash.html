@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../js/sha256.js"></script>
+    <script src="../js/passwordUtility.js"></script>
+  </head>
+  <body>
+
+    <input type="text" id="toHash" onchange="hash();" />
+    <h1 id="hashOutput"></h1>
+
+    <input type="text" id="hashCompare" onchange="compare();" />
+    <h1 id="compareOutput"></h1>
+    <script>
+
+      function hash() {
+        let text = document.getElementById("toHash").value;
+
+        let output = document.getElementById("hashOutput");
+        output.innerHTML = PasswordUtility.hashPassword(text.toString());
+      }
+
+      function compare() {
+        let firstHash = document.getElementById("hashOutput").innerHTML.toString();
+        let textToCompare = document.getElementById("hashCompare").value.toString();
+
+        document.getElementById("compareOutput").innerHTML =
+          PasswordUtility.comparePasswords(firstHash, textToCompare);
+      }
+
+    </script>
+  </body>
+</html>
