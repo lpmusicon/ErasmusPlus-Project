@@ -2,6 +2,7 @@
 
 namespace ErasmusPlusProject;
 
+class FileUploader
 {
     private $file;
 
