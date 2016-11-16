@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <input type="text" id="toHash" onchange="hash();" />
+    <input type="password" id="toHash" onchange="hash();" />
     <h1 id="hashOutput"></h1>
 
     <input type="text" id="hashCompare" onchange="compare();" />
@@ -17,15 +17,15 @@
         let text = document.getElementById("toHash").value;
 
         let output = document.getElementById("hashOutput");
-        output.innerHTML = PasswordUtility.hashPassword(text.toString());
+        output.innerHTML = new PasswordUtility().hashPassword(text);
       }
 
       function compare() {
-        let firstHash = document.getElementById("hashOutput").innerHTML.toString();
-        let textToCompare = document.getElementById("hashCompare").value.toString();
+        let firstHash = document.getElementById("hashOutput").innerHTML;
+        let textToCompare = document.getElementById("hashCompare").value;
 
         document.getElementById("compareOutput").innerHTML =
-          PasswordUtility.comparePasswords(firstHash, textToCompare);
+          new PasswordUtility().comparePasswords(firstHash, textToCompare);
       }
 
     </script>

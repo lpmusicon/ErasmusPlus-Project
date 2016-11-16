@@ -55,32 +55,29 @@
             <div id="list" class="row"></div>
         </div>
         <script>
-        fetch("assets/db.json")
-            .then(function(response)
-            {
-                return response.json();
-            })
-            .then(function(downloadedDictionary)
-            {
-                let inputPL = document.getElementById("pl");
-                let inputCZ = document.getElementById("cz");
-                let inputEN = document.getElementById("en");
-                let symbolBtn = document.getElementById("symbolButton");
-                let photoBtn = document.getElementById("photoButton");
-                let addBtn = document.getElementById("addButton");
+        {
+            new PasswordUtility()
+                .userAuth();
 
-                let wordAdmin = new WordAdmin( downloadedDictionary, inputPL, inputEN, inputCZ );
-                let downloadedDictionaryNode = document.getElementById("downloadedDictionary");
-                let workingDictionaryNode = document.getElementById("currentUnsaved");
+            let root = document;
 
-                wordAdmin.bindDownloadedDictionaryNode( downloadedDictionaryNode ).renderDownloadedDictionary();
-                wordAdmin.bindWorkingDictionaryNode( workingDictionaryNode ).renderWorkingDictionary();
+            let inputPL = root.getElementById("pl");
+            let inputCZ = root.getElementById("cz");
+            let inputEN = root.getElementById("en");
+            let symbolBtn = root.getElementById("symbolButton");
+            let photoBtn = root.getElementById("photoButton");
+            let addBtn = root.getElementById("addButton");
+            let downloadedDictionaryNode = root.getElementById("downloadedDictionary");
+            let workingDictionaryNode = root.getElementById("currentUnsaved");
 
-                wordAdmin.bindAddButton(addBtn);
-                wordAdmin.bindSymbolInput(symbolBtn);
-                wordAdmin.bindPhotoInput(photoBtn);
-            })
-            .catch(console.error);
+            new WordAdmin( inputPL, inputEN, inputCZ )
+                .bindAddButton(addBtn)
+                .bindSymbolInput(symbolBtn)
+                .bindPhotoInput(photoBtn)
+                .bindDownloadedDictionaryNode( downloadedDictionaryNode )
+                .bindWorkingDictionaryNode( workingDictionaryNode )
+                .renderWorkingDictionary();
+        }
         </script>
     </body>
 </html>
