@@ -47,7 +47,14 @@ class WordAdmin
         this.currentSymbol.setAttribute('type', 'file');
 
         this.postToServer();
+    }
 
+    postToServer()
+    {
+        let fData = new FormData();
+        fData.append("entry", JSON.stringify(this.workingDictionary));
+        fData.append("symbols[]", this.currentSymbol.value);
+        fData.append("images[]", this.currentPhoto.value);
     }
 
     bindPolishInput(input)
