@@ -2,6 +2,8 @@
 
 namespace ErasmusPlusProject;
 
+require 'fileUpload.php';
+
 function readDictionary(string $filename)
 {
     $filenames = "../db.json";
@@ -33,36 +35,18 @@ function appendEntry($dictionary, $entry)
 
 function readFromStream()
 {
-    var_dump($_POST);
-    $entry = json_decode($_POST['entry'], true);
-    $symbols = $_FILES["symbols"];
-    $images = $_FILES["images"];
-    
-    return [ "entry" => $entry[0], "symbols" => $symbols, "images" => $images ];
-}
-
-function uploadFiles($files)
-{
-    $uploaded = [];
-    for($i = 0; $i < count($files["tmp_name"]); $i++)
-    {
-        $check = getimagesize($files["tmp_name"][$i]);
-        if($check !== false) {
-            $newName = "../../img/".uniqid("img").".".pathinfo($files["name"][$i], PATHINFO_EXTENSION);
-            if (move_uploaded_file($files["tmp_name"][$i], $newName)) 
-            {
-                array_push($uploaded, "img/".basename( $newName ));
-            }
-            else array_push($uploaded, "");
-        }
-    }
-    return $uploaded;
+    return [
+        "entry" => json_decode($_POST['entry'], true), 
+        "symbol" => $_FILES["symbol"], 
+        "images" => $_FILES["image"]];
 }
 
 $stream = readFromStream();
-$stream["symbols"] = uploadFiles($stream["symbols"]);
-$stream["images"] = uploadFiles($stream["images"]);
-$dictionary = readDictionary("");
+$fileUploader = new FileUploader();
 
+$stream["symbol"] = $fileUploader->uploadFile($stream["symbol"]);
+$stream["image"] = $fileUploader->uploadFile($stream["images"]);
+
+$dictionary = readDictionary("");
 $dictionary = appendEntry($dictionary, $stream);
 saveDictionary($dictionary, "");

@@ -50,10 +50,10 @@ class WordAdmin
     postToServer()
     {
         let fData = new FormData();
-        fData.append("entry", JSON.stringify(this.workingDictionary));
+        fData.append("entry", JSON.stringify(this.workingDictionary[this.workingDictionary.length - 1]));
         console.log(this.currentSymbol.files);
-        fData.append("symbols[]", this.currentSymbol.files[0], this.currentSymbol.value);
-        fData.append("images[]", this.currentPhoto.files[0], this.currentPhoto.value);
+        fData.append("symbol", this.currentSymbol.files[0], this.currentSymbol.value);
+        fData.append("image", this.currentPhoto.files[0], this.currentPhoto.value);
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'assets/php/dictionaryAppend.php', true);
