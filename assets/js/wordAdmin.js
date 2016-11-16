@@ -55,6 +55,16 @@ class WordAdmin
         fData.append("entry", JSON.stringify(this.workingDictionary));
         fData.append("symbols[]", this.currentSymbol.value);
         fData.append("images[]", this.currentPhoto.value);
+
+        $.ajax({
+            url: "assets/php/dictionaryAppend.php",
+            type: 'POST',
+            processData: false,
+            data: fData,
+            success: function(response) {
+              console.log(response);
+            }
+        });
     }
 
     bindPolishInput(input)
