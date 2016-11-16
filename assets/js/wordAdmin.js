@@ -2,9 +2,8 @@
 
 class WordAdmin
 {
-    constructor(downloadedDictionary, polishInput, englishInput, czechInput)
+    constructor(polishInput, englishInput, czechInput)
     {
-        this.downloadedDictionary = downloadedDictionary;
         this.polishInput = polishInput;
         this.czechInput = czechInput;
         this.englishInput = englishInput;
@@ -18,6 +17,8 @@ class WordAdmin
 
         this.currentPhoto = document.createElement('input');
         this.currentPhoto.setAttribute('type', 'file');
+
+        this.fetchDictionary();
     }
 
     addNewEntry()
@@ -68,14 +69,14 @@ class WordAdmin
     {
         var a = this;
         fetch("assets/db.json")
-            .then(function(response)
-            {
-                return response.json();
-            })
-            .then(function(downloadedDictionary)
-            {
-                a.bindDownloadedDictionary(downloadedDictionary).renderDownloadedDictionary();
-            });
+        .then(function(response)
+        {
+            return response.json();
+        })
+        .then(function(downloadedDictionary)
+        {
+            a.bindDownloadedDictionary(downloadedDictionary.reverse()).renderDownloadedDictionary();
+        });
     }
 
     bindPolishInput(input)
@@ -102,6 +103,7 @@ class WordAdmin
         button.onclick = function(e) {
             cs.click();
         };
+        return this;
     }
 
     bindPhotoInput(button)
@@ -110,6 +112,7 @@ class WordAdmin
         button.onclick = function(e) {
             cp.click();
         };
+        return this;
     }
 
     bindAddButton(button)
@@ -118,6 +121,7 @@ class WordAdmin
         button.onclick = function(e) {
             wa.addNewEntry();
         }
+        return this;
     }
 
     bindDownloadedDictionary(dict)
