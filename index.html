@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/materialize.min.css">
+        <link rel="stylesheet" href="assets/css/cards.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="assets/js/materialize.min.js"></script>
         <script src="assets/js/waves.js"></script>
@@ -15,13 +16,24 @@
           display: flex;
           min-height: 100vh;
           flex-direction: column;
-          min-width: 480px;
+          min-width: 320px;
         }
 
         main {
           flex: 1 0 auto;
         }
 
+        footer {
+            z-index: -1;
+        }
+
+        footer img {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+     
         </style>
     </head>
     <body class="grey lighten-5">

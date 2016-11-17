@@ -192,23 +192,31 @@ class WordAdmin
         let row2 = document.createElement('div');
         row2.setAttribute('class', 'row center-align');
 
+        let valignWrapper = document.createElement('div');
+        valignWrapper.setAttribute('class', 'center-align valign-wrapper col s12');
+        valignWrapper.setAttribute('style', 'padding: 32px');
+
         if(element.imgPath.toString().length > 0)
         {
             let IMG = document.createElement('img');
-            IMG.setAttribute('class', 'center-align valign');
+            IMG.setAttribute('class', 'valign');
             IMG.setAttribute('src', element.imgPath);
-            IMG.setAttribute('style', "max-height: 250px; margin-top: 64px; margin-bottom: 36px");
-            row2.appendChild(IMG);
+            IMG.setAttribute('style', "max-height: 135px;");
+
+            valignWrapper.appendChild(IMG);
         }
 
         if(element.symbol.toString().length > 0)
         {
             let SYMBOL = document.createElement('img');
-            SYMBOL.setAttribute('class', 'center-align valign');
+            SYMBOL.setAttribute('class', 'valign');
             SYMBOL.setAttribute('src', element.symbol);
-            SYMBOL.setAttribute('style', "max-height: 250px; margin-left: 36px; margin-bottom: 36px;");
-            row2.appendChild(SYMBOL);
+            SYMBOL.setAttribute('style', "max-height: 100px;");
+
+            valignWrapper.appendChild(SYMBOL);
         }
+
+        row2.appendChild(valignWrapper);
 
         if(element.symbol.toString().length > 0 || element.imgPath.toString().length > 0)
         {
