@@ -172,7 +172,8 @@ class WordAdmin
         EDIT.innerHTML = '<i class="material-icons">edit</i>';
 
         let DELETE = document.createElement('a');
-        DELETE.setAttribute('class', 'waves-effect waves-red btn-flat disabled');
+        DELETE.setAttribute('onclick', 'deleteElement(' + element.id + ')');
+        DELETE.setAttribute('class', 'waves-effect waves-red btn-flat');
         DELETE.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
         DELETE.innerHTML = '<i class="material-icons">delete</i>';
 

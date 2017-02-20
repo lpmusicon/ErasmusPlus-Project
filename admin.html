@@ -58,8 +58,7 @@
         </div>
         <script>
         {
-            new PasswordUtility()
-                .userAuth();
+            new PasswordUtility().userAuth();
 
             let root = document;
 
@@ -79,6 +78,15 @@
                 .bindDownloadedDictionaryNode( downloadedDictionaryNode )
                 .bindWorkingDictionaryNode( workingDictionaryNode )
                 .renderWorkingDictionary();
+        }
+
+        function deleteElement(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'assets/php/dictionaryRemove.php?id='+id, true);
+            xhr.onreadystatechange = function(e) {
+                window.location.href="admin.html";
+            }
+            xhr.send();
         }
         </script>
     </body>
