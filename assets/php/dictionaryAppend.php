@@ -15,10 +15,13 @@ function readFromStream()
 
 $stream = readFromStream();
 $fileUploader = new FileUploader();
+if(isset($stream["symbol"])) {
+    $stream["symbol"] = $fileUploader->uploadFile($stream["symbol"]);
+}
+if(isset($stream["images"])) {
+    $stream["image"] = $fileUploader->uploadFile($stream["images"]);
+}
 
-$stream["symbol"] = $fileUploader->uploadFile($stream["symbol"]);
-$stream["image"] = $fileUploader->uploadFile($stream["images"]);
-
-$dictionary = readDictionary("");
+$dictionary = readDictionary();
 $dictionary = appendEntry($dictionary, $stream);
 saveDictionary($dictionary, "");

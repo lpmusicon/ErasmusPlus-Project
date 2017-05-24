@@ -1,6 +1,6 @@
 <?php
 
-function readDictionary(string $filename = null)
+function readDictionary($filename = null)
 {
     $filenames = "../db.json";
     $unparsedDictionary = file_get_contents( $filenames );
@@ -11,7 +11,7 @@ function readDictionary(string $filename = null)
     }
 }
 
-function saveDictionary($dictionary, string $filename = null)
+function saveDictionary($dictionary, $filename = null)
 {
     $filename = "../db.json";
     $stringify = json_encode($dictionary);

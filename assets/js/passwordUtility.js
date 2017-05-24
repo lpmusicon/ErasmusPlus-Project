@@ -5,20 +5,14 @@ class PasswordUtility
     constructor()
     {
         this.allowedPasswords = [
-            "819af22cd95ca378d06b392499a531c01cf972926b6d0a6b94a7492a6120c1ea",
-            "4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2"
+            "midara",
+            "root"
         ];
     }
 
-    hashPassword(password)
+    comparePasswords(saved, user)
     {
-      return sha256(password);
-    }
-
-    comparePasswords(hashed, password)
-    {
-        let hashedInput = this.hashPassword(password);
-        return hashed === hashedInput;
+        return saved === user;
     }
 
     isAllowed(password)
@@ -32,15 +26,21 @@ class PasswordUtility
 
     userAuth()
     {
-        let tries = 0;
-        while(!this.isAllowed(prompt("Enter password")))
+        const sessionHash = sessionStorage.getItem('userHash');
+        if(this.isAllowed(sessionHash)) {
+            return true;
+        }
+
+        for(let tries = 0; tries < 5; tries++)
         {
-            tries++;
-            if(tries > 5)
+            let userInput = prompt("Enter password");
+            if(this.isAllowed(userInput))
             {
-                window.location.href = "index.html";
-                break;
+                sessionStorage.setItem('userHash', userInput);
+                return true;
             }
         }
+
+        return false;
     }
 }

@@ -9,8 +9,8 @@ class WordAdmin
         this.englishInput = englishInput;
 
         this.workingDictionary = [];
+        this.downloadedDictionary = [];
         this.downloadedDictionaryNode = null;
-        this.workingDictionaryNode = null;
 
         this.currentSymbol = document.createElement('input');
         this.currentSymbol.setAttribute('type', 'file');
@@ -51,15 +51,22 @@ class WordAdmin
     {
         let fData = new FormData();
         fData.append("entry", JSON.stringify(this.workingDictionary[this.workingDictionary.length - 1]));
-        console.log(this.currentSymbol.files);
-        fData.append("symbol", this.currentSymbol.files[0], this.currentSymbol.value);
-        fData.append("image", this.currentPhoto.files[0], this.currentPhoto.value);
-
+        if(this.currentSymbol.files.length > 0) {
+            fData.append("symbol", this.currentSymbol.files[0], this.currentSymbol.value);
+        }
+        if(this.currentPhoto.files.length > 0) {
+            fData.append("image", this.currentPhoto.files[0], this.currentPhoto.value);
+        }
+        
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'assets/php/dictionaryAppend.php', true);
 
         var a = this;
         xhr.onreadystatechange = function(e) {
+            a.currentPhoto.setAttribute('type', 'text');
+            a.currentPhoto.setAttribute('type', 'file');
+            a.currentSymbol.setAttribute('type', 'text');
+            a.currentSymbol.setAttribute('type', 'file');
             a.fetchDictionary();
         }
         xhr.send(fData);
@@ -67,37 +74,35 @@ class WordAdmin
 
     fetchDictionary()
     {
-        var a = this;
         fetch("assets/db.json")
-        .then(function(response)
-        {
+        .then((response) => {
             return response.json();
         })
-        .then(function(downloadedDictionary)
-        {
-            a.bindDownloadedDictionary(downloadedDictionary.reverse()).renderDownloadedDictionary();
+        .then((dictionary) => {
+            this.downloadedDictionary = dictionary.reverse();
+            this.renderDownloadedDictionary();
         });
     }
 
-    bindPolishInput(input)
+    polishInput(input)
     {
         this.polishInput = input;
         return this;
     }
 
-    bindEnglishInput(input)
+    englishInput(input)
     {
         this.englishInput = input;
         return this;
     }
 
-    bindCzechInput(input)
+    czechInput(input)
     {
         this.englishInput = input;
         return this;
     }
 
-    bindSymbolInput(button)
+    symbolInput(button)
     {
         var cs = this.currentSymbol;
         button.onclick = function(e) {
@@ -106,7 +111,7 @@ class WordAdmin
         return this;
     }
 
-    bindPhotoInput(button)
+    photoInput(button)
     {
         var cp = this.currentPhoto;
         button.onclick = function(e) {
@@ -115,7 +120,7 @@ class WordAdmin
         return this;
     }
 
-    bindAddButton(button)
+    addButton(button)
     {
         var wa = this;
         button.onclick = function(e) {
@@ -124,21 +129,9 @@ class WordAdmin
         return this;
     }
 
-    bindDownloadedDictionary(dict)
-    {
-        this.downloadedDictionary = dict;
-        return this;
-    }
-
     bindDownloadedDictionaryNode(node)
     {
         this.downloadedDictionaryNode = node;
-        return this;
-    }
-
-    bindWorkingDictionaryNode(node)
-    {
-        this.workingDictionaryNode = node;
         return this;
     }
 
@@ -149,7 +142,7 @@ class WordAdmin
         row1.setAttribute('class', 'row');
 
         let PL = document.createElement('h5');
-        PL.setAttribute('class', 'col s3 center-align');
+        PL.setAttribute('class', 'col s4 center-align');
         PL.setAttribute('style', 'border-right: 1px solid #ccc; font-size: 1.3rem');
         PL.textContent = element.pl;
 
@@ -164,12 +157,7 @@ class WordAdmin
         CZ.textContent = element.cz;
 
         let ROW = document.createElement('div');
-        ROW.setAttribute('class', 'col s2 right-align');
-
-        let EDIT = document.createElement('a');
-        EDIT.setAttribute('class', 'waves-effect waves-orange btn-flat disabled');
-        EDIT.setAttribute('style', 'padding: 2px 1rem 0 1rem; height: 100%');
-        EDIT.innerHTML = '<i class="material-icons">edit</i>';
+        ROW.setAttribute('class', 'col s1 right-align');
 
         let DELETE = document.createElement('a');
         DELETE.setAttribute('onclick', 'deleteElement(' + element.id + ')');
@@ -181,7 +169,6 @@ class WordAdmin
         row1.appendChild(EN);
         row1.appendChild(CZ);
 
-        ROW.appendChild(EDIT);
         ROW.appendChild(DELETE);
 
         row1.appendChild(ROW);
@@ -241,11 +228,5 @@ class WordAdmin
     {
         if(!this.downloadedDictionaryNode) return;
         this.renderDictionaryToNode(this.downloadedDictionary, this.downloadedDictionaryNode);
-    }
-
-    renderWorkingDictionary()
-    {
-        if(!this.workingDictionaryNode) return;
-        this.renderDictionaryToNode(this.workingDictionary, this.workingDictionaryNode);
     }
 }

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="assets/css/cards.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="assets/js/materialize.min.js"></script>
-        <script src="assets/js/sha256.js"></script>
+        <!--<script src="assets/js/sha256.js"></script>-->
         <script src="assets/js/passwordUtility.js"></script>
         <script src="assets/js/wordAdmin.js"></script>
     </head>
@@ -48,43 +48,37 @@
                 </div>
             </div>
             <div class="row">
-                <span id="currentUnsaved"></span>
-            </div>
-            <div class="row">
                 <h5>Saved</h5>
                 <span id="downloadedDictionary"></span>
             </div>
             <div id="list" class="row"></div>
         </div>
         <script>
-        {
-            new PasswordUtility().userAuth();
+        
+        const passwd = new PasswordUtility();
+        passwd.userAuth();
 
-            let root = document;
+        const inputPL = document.getElementById("pl");
+        const inputCZ = document.getElementById("cz");
+        const inputEN = document.getElementById("en");
+        const symbolBtn = document.getElementById("symbolButton");
+        const photoBtn = document.getElementById("photoButton");
+        const addBtn = document.getElementById("addButton");
+        const downloadedDictionary = document.getElementById("downloadedDictionary");
 
-            let inputPL = root.getElementById("pl");
-            let inputCZ = root.getElementById("cz");
-            let inputEN = root.getElementById("en");
-            let symbolBtn = root.getElementById("symbolButton");
-            let photoBtn = root.getElementById("photoButton");
-            let addBtn = root.getElementById("addButton");
-            let downloadedDictionaryNode = root.getElementById("downloadedDictionary");
-            let workingDictionaryNode = root.getElementById("currentUnsaved");
-
-            new WordAdmin( inputPL, inputEN, inputCZ )
-                .bindAddButton(addBtn)
-                .bindSymbolInput(symbolBtn)
-                .bindPhotoInput(photoBtn)
-                .bindDownloadedDictionaryNode( downloadedDictionaryNode )
-                .bindWorkingDictionaryNode( workingDictionaryNode )
-                .renderWorkingDictionary();
-        }
+        const wa = new WordAdmin( inputPL, inputEN, inputCZ);
+        wa.addButton(addBtn)
+            .symbolInput(symbolBtn)
+            .photoInput(photoBtn)
+            .bindDownloadedDictionaryNode( downloadedDictionary )
+            .renderDownloadedDictionary();
+        
 
         function deleteElement(id) {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'assets/php/dictionaryRemove.php?id='+id, true);
             xhr.onreadystatechange = function(e) {
-                window.location.href="admin.html";
+                wa.fetchDictionary();
             }
             xhr.send();
         }
